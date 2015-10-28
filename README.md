@@ -1,3 +1,3 @@
 Harvard CS205 Homework Repository
 Self-study extreme programming course offered at Harvard, as a gradute level course for data science program. 
-1. Do the final question in HW1. In map-reduce programming paradigm, use spark to find independent components in a graph
+1. Do the final question in HW1. In map-reduce programming paradigm, use spark to find independent components in a graph. The essence is implementation of decentralized BFS. Init distance dict, and rdd of nodes. In each iteration, in map prase, nodes at the frontier updates its distance. In reduce phase, collect dict of distance, which will be used in the next map phase. After BFS is implemented, use it to get indenpendent component in the graph. Pop one node, do BFS search, collect the touched nodes as one component, and remove them from the pool. Repeat until pool is empty. 
