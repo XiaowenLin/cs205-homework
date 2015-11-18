@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 from matplotlib.collections import EllipseCollection
 import numpy as np
+import matplotlib
+matplotlib.use('TkAgg')
 
 def randcolor():
     return np.random.uniform(0.0, 0.89, (3,)) + 0.1
@@ -34,3 +36,4 @@ class Animator(object):
     def update(self, positions):
         self.circles.set_offsets(positions)
         plt.draw()
+        plt.pause(10.**-6.)
